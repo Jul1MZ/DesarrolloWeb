@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url('/IMG/73efa0fc-01bd-44dc-864f-3f61aa322673.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #74101ad0;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    padding: 10px;
+    gap: 3rem;
+}
+
+/**********************************************************/
+
+/** HEADER **/
+
+.logo {
+    font-size: 30px;
+}
+
+.lista-principal {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.lista-principal a {
+    color: black;
+}
+
+.lista-principal button {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+}
+
+.lista-principal button:hover {
+    cursor: pointer;
+    background-color: #c87731b0;
+}
+
+.login-btn {
+    height: 30px;
+    border-radius: 10px;
+    background: transparent;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #c87731b0;
+}
+
+/** MAIN **/
+
+.categorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #74101ad0;
+    padding: 10px 20px;
+    width: 10vw;
+    height: 40vh;
+}
+
+.lista-categorias {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-self: flex-start;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.cat-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    text-align: start;
+    padding: 1px;
+}
+
+.cat-btn:hover {
+    background-color: #c87731b0;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 80vw;
+    padding: 20px 10px;
+}
+
+.container input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+.games-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.juegos {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.juego {
+    background-color: #c87731b0;
+    height: auto;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.juego img {
+    width: 40%;
+}
+
+/*************** CONTENEDOR DE FORMULARIOS DE CARGA ********************/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    z-index: 5; /* Asegúrate de que esté detrás del formulario */
+}
+
+.formulario-carga {
+    z-index: 10; /* Asegúrate de que esté sobre el overlay */
+}
+.formulario-carga {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: flex;
+    gap: 5rem;
+    background-color: #c87731c9;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.cerrar {
+    position: absolute;
+    left: 95%;
+    top: 2%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #c87731;
+}
+
+.cerrar:hover {
+    cursor: pointer;
+    background-color: #74101ad0;
+}
+
+#formulario-juegos, #formulario-categorias {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#formulario-juegos button, #formulario-categorias button {
+    width: 100px;
+    height: 30px;
+    align-self: center;
+    border-radius: 10px;
+    background-color: #c87731;
+}
+
+#formulario-juegos button:hover, #formulario-categorias button:hover {
+    cursor: pointer;
+    background-color: #74101ad0;
+}
+
+.linea-formulario {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linea-formulario input, .linea-formulario select {
+    width: 200px;
+    height: 25px;
+    outline: none;
+}
+
+.linea-formulario #imagen-juego {
+    font-size: 15px;
+}
+
+.disabled {
+    display: none;
+}
