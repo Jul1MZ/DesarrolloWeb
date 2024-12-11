@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>GamesHunter</title>
+</head>
+<body onload="cargarCategorias(); mostrarCategorias()">
+    <header>
+        <div class="logo">Games Hunter</div>
+        <div class="navbar">
+            <ul class="lista-principal">
+                <li class="items"><button>INICIO</button></li>
+                <li class="items"><button id="subir-datos">CARGAR</button></li>
+                <li class="items"><button>OFERTAS</button></li>
+            </ul>
+        </div>
+        <div class="login">
+            <button class="login-btn">INICIAR SESION</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="categorias">
+            <h2>Categorías</h2>
+            <ul class="lista-categorias" id="categorias">
+                
+            </ul>
+        </div>
+
+        <section class="container">
+            <div class="busqueda">
+                <input type="text" id="search" placeholder="Ingresar nombre del juego...">
+            </div>
+            
+            <div class="games-container">
+                <h2>Juegos Destacados</h2>
+                <div class="juegos" id="juegos">
+                    
+                </div>
+            </div>
+
+            <div class="overlay disabled"></div>
+            <div class="formulario-carga disabled">
+                <button class="cerrar">X</button>
+                <form id="formulario-juegos">
+                    <h2>CARGA DE JUEGOS</h2>
+                    <div class="linea-formulario">
+                    <label for="id-juego">ID:</label>
+                    <input type="number" id="id-juego">
+                    </div>
+
+                    <div class="linea-formulario">
+                    <label for="nombre-juego">Nombre:</label>
+                    <input type="text" id="nombre-juego">
+                    </div>
+
+                    <div class="linea-formulario">
+                    <label for="genero-juego">Genero:</label>
+                    <select id="genero-juego">
+                        <!--Se llena con javascript -->
+                    </select>
+                    </div>
+
+                    <div class="linea-formulario">
+                    <label for="precio-juego">Precio:</label>
+                    <input type="number" id="precio-juego">
+                    </div>
+
+                    <div class="linea-formulario">
+                    <label for="descripcion-juego">Descripcion:</label>
+                    <input type="text" id="descripcion-juego">
+                    </div>
+
+                    <div class="linea-formulario">
+                    <label for="imagen-juego">Imagen:</label>
+                    <input type="file" id="imagen-juego">
+                    </div>
+
+                    <div class="linea-formulario">
+                    <label for="fecha-descuento-juego">Fecha descuento:</label>
+                    <input type="date" id="fecha-descuento-juego">
+                    </div>
+
+                    <div class="linea-formulario">
+                    <label for="descuento-juego">Porcentaje de descuento:</label>
+                    <input type="number" maxlength="2" id="descuento-juego">
+                    </div>
+                    <div class="linea-formulario">
+                        <button id="subir-juegos">Guardar</button>
+                        <button id="limpiar-juegos">Limpiar</button>
+                        <button id="buscar-juegos">Buscar</button>
+                        <button id="borrar-juegos">Borrar</button>
+                    </div>
+                </form>
+
+                <form id="formulario-categorias">
+                    <H2>CARGA DE CATEGORIAS</H2>
+                    <div class="linea-formulario">
+                        <label for="id-genero">ID:</label>
+                        <input type="number" id="id-genero">
+                    </div>
+
+                    <div class="linea-formulario">
+                        <label for="nombre-genero">Nombre:</label>
+                        <input type="text" id="nombre-genero">
+                    </div>
+
+                    <div class="linea-formulario">
+                        <button id="subir-categoria">Guardar</button>
+                        <button id="limpiar-categoria">Limpiar</button>
+                        <button id="buscar-categoria">Buscar</button>
+                        <button id="borrar-categoria">Borrar</button>
+                    </div>
+                </form>
+            </div>
+            
+        </section>
+    </main>
+</body>
+<script src="JS/index.js"></script>
+</html>
